@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+</head>
+<body>
+<h1 th:text="${title}">
+</h1>
+
+<span th:text="${content}"></span><br>
+<span th:utext="${content}"></span><br>
+
+<span th:text="${now}"></span><br>
+<span th:text="${#dates.format(now,'yyyy-MM-dd HH:mm:ss')}"></span>
+
+
+<div th:insert="common/page :: copy">
+
+</div>
+
+</body>
+</html>

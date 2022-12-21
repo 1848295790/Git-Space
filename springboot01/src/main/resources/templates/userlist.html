@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+</head>
+<body>
+<table>
+    <tr th:each="user:${users}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.username}"></td>
+        <td>
+            <span th:if="${user.sex}==1" th:text="男"></span>
+            <span th:if="${user.sex}==2" th:text="女"></span>
+        </td>
+        <td th:text="${user.phone}"></td>
+        <td>
+            <a th:href="@{/user/view/}+${user.id}">查看</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
